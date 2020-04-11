@@ -1,0 +1,14 @@
+#menu {
+    height: 50px;
+    width: 70%;
+    color: #eee;
+    background-color: #3c3c3c;
+    font-size: 24px;
+    margin: 0 15vw;
+    padding: 10px 20px;
+    box-shadow: 10px 5px lightgrey;
+}
+
+div > a {
+    color: #eee
+}

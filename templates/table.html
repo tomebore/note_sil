@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Всего заметок {{ rows|length }}</h2>
+    <hr>
+    <table class="table table-dark table-hover table-bordered">
+        <thead>
+            <tr>
+                <th>Дата</th>
+                <th>Заметка</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in rows %}
+            <tr>
+                <td>{{ row.0 }}</td>
+                <td>{{ row.1 }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <hr>
+    <table class="table table-primary table-hover table-bordered table-striped">
+        <thead class="thead-light">
+            <tr>
+                <th>Дата</th>
+                <th>Заметка</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in rows %}
+            <tr>
+                {% for cell in row %}
+                <td>{{ cell }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
